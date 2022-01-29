@@ -60,7 +60,7 @@ pub(crate) fn install(
     }
 
     let root = root.as_ref();
-    let libs = root.join("lib");
+    let libs = Path::new("lib");
     std::fs::create_dir_all(&libs)?;
 
     for dep in dependencies {
